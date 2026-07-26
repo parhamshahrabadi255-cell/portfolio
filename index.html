@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -30,12 +29,9 @@
     -webkit-font-smoothing:antialiased;
   }
   ::selection{background:var(--blueprint);color:var(--paper-on-ink);}
-
   .mono{font-family:'Space Mono', monospace;}
   .grotesk{font-family:'Space Grotesk', sans-serif;}
-
   a{color:inherit;}
-
   /* ---------- Blueprint grid backdrop ---------- */
   .grid-bg{
     position:absolute; inset:0;
@@ -52,7 +48,6 @@
       linear-gradient(90deg, rgba(233,231,221,.08) 1px, transparent 1px);
     opacity:1;
   }
-
   /* ---------- Top bar ---------- */
   header.topbar{
     position:fixed; top:0; left:0; right:0; z-index:50;
@@ -121,11 +116,9 @@
     animation:drip 2.2s ease-in-out infinite;
   }
   @keyframes drip{ to { top:40px; } }
-
   /* ---------- Section shells ---------- */
   section{position:relative; padding:120px 32px;}
   .wrap{max-width:1160px; margin:0 auto;}
-
   /* Title block, drafting-stamp styled */
   .title-block{
     display:grid;
@@ -153,7 +146,6 @@
   }
   .proj-desc{max-width:680px; color:var(--graphite); font-size:18px; margin-bottom:64px;}
   .proj-desc strong{color:var(--ink); font-style:normal;}
-
   .figure{margin-bottom:20px;}
   .figure img{
     width:100%; display:block; border:1px solid var(--line);
@@ -165,10 +157,8 @@
     padding:10px 2px; border-bottom:1px solid var(--line);
   }
   .caption .sheet{color:var(--blueprint);}
-
   .hero-figure{margin-bottom:64px;}
   .hero-figure img{width:100%; display:block;}
-
   .drawing-grid{
     display:grid; grid-template-columns:1fr 1fr; gap:40px;
   }
@@ -182,7 +172,6 @@
   .night .caption .sheet{color:#7fb0e0;}
   .night .figure img{border-color:rgba(233,231,221,.15);}
 
-  /* ---------- About section ---------- */
   .about-grid{
     display:grid; grid-template-columns: 260px 1fr; gap:56px;
     align-items:start;
@@ -201,13 +190,10 @@
     font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.1em; color:var(--blueprint);
     text-transform:uppercase; margin-bottom:16px; display:block;
   }
-
   @media (max-width:900px){
     .about-grid{grid-template-columns:1fr; gap:40px;}
     .about-portrait{max-width:220px;}
   }
-
-
   .stamp-divider{
     display:flex; align-items:center; gap:18px;
     margin:0 0 90px;
@@ -215,8 +201,6 @@
     text-transform:uppercase;
   }
   .stamp-divider::before, .stamp-divider::after{content:'';flex:1;height:1px;background:var(--line);}
-
-  /* ---------- Footer ---------- */
   footer{
     padding:90px 32px 50px;
     border-top:1px solid var(--ink);
@@ -237,8 +221,6 @@
     max-width:1160px; margin:60px auto 0; padding-top:20px; border-top:1px solid var(--line);
     display:flex; justify-content:space-between; font-family:'Space Mono',monospace; font-size:11px; color:var(--graphite);
   }
-
-  /* ---------- Reveal on scroll ---------- */
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
 
@@ -246,7 +228,6 @@
     .reveal{opacity:1; transform:none; transition:none;}
     .scroll-cue .bar::after{animation:none;}
   }
-
   @media (max-width:820px){
     header.topbar nav{display:none;}
     .title-block{grid-template-columns:1fr 1fr;}
@@ -259,19 +240,16 @@
 </style>
 </head>
 <body>
-
 <header class="topbar">
-  <div class="name grotesk">PARHAM SHAHRABADI<span class="mono" style="color:var(--blueprint); margin-left:8px; font-weight:400;">/ARCH STUDENT</span></div>
-  <nav>
-    <a href="#about" data-grid="00">ABOUT</a>
-    <a href="#p01" data-grid="01">SPIRAL RESIDENCE</a>
-    <a href="#p02" data-grid="02">COURTYARD BLOCK</a>
-    <a href="#p03" data-grid="03">GARDEN VILLA</a>
-    <a href="#contact" data-grid="—">CONTACT</a>
-  </nav>
+<div class="name grotesk"><a href="#" style="text-decoration:none;">PARHAM SHAHRABADI</a><span class="mono" style="color:var(--blueprint); margin-left:8px; font-weight:400;">/ARCH STUDENT</span></div>
+<nav>
+  <a href="#about" data-grid="00">ABOUT</a>
+  <a href="#p01" data-grid="01">SPIRAL RESIDENCE</a>
+  <a href="#p02" data-grid="02">COURTYARD BLOCK</a>
+  <a href="#p03" data-grid="03">GARDEN VILLA</a>
+  <a href="#contact" data-grid="—">CONTACT</a>
+</nav>
 </header>
-
-<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="grid-bg"></div>
   <div class="hero-inner">
@@ -281,8 +259,6 @@
   </div>
   <div class="scroll-cue"><div class="bar"></div>SCROLL</div>
 </section>
-
-<!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="wrap reveal">
     <div class="title-block mono">
@@ -291,13 +267,11 @@
       <div><div class="label">Role</div><div class="value">Architecture student</div></div>
       <div><div class="label">Status</div><div class="value">Semester 6, Azad University of Karaj</div></div>
     </div>
-
     <div class="about-grid">
       <div>
         <img class="about-portrait" src="portrait.jpg" alt="Portrait of Parham Shahrabadi">
         <div class="about-loc mono">Alborz, Karaj</div>
       </div>
-
       <div>
         <span class="col-label">Profile</span>
         <p class="about-bio">Architecture student at the Islamic Azad University of Karaj, currently in semester 6. Works across AutoCAD, Revit, SketchUp, Enscape and V-Ray, with hands-on execution experience in wood and interior decoration from real production processes.</p>
@@ -306,8 +280,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ PROJECT 01 — SPIRAL RESIDENCE ============ -->
 <section id="p01">
   <div class="wrap reveal">
     <div class="title-block mono">
@@ -316,16 +288,13 @@
       <div><div class="label">Program</div><div class="value">Private hillside villa</div></div>
       <div><div class="label">Status</div><div class="value">Student project — Design Studio 1</div></div>
     </div>
-
     <h2 class="proj-title">A single ribbon,<br>wound into a house.</h2>
     <p class="proj-desc">A first-semester exercise in generating a whole house from a single move: one continuous curved wall, spiraling inward from the site's edge to loosely bind the public rooms upstairs and coil down to a subterranean garage below. <strong>Glazing follows the curve</strong> rather than cutting against it, so the study became as much about how a wrap-around window reads a hillside as about the plan itself.</p>
   </div>
-
   <div class="wrap hero-figure reveal">
     <img src="Render_tarh2.png" alt="Night exterior render of the curved hillside residence, glass facades glowing over the coastline">
     <div class="caption"><span>FIG. 01 — EXTERIOR, NIGHT VIEW FROM SOUTH TERRACE</span><span class="sheet">SCALE N.T.S.</span></div>
   </div>
-
   <div class="wrap reveal">
     <div class="stamp-divider">Drawing Set — Plans &amp; Sections</div>
     <div class="drawing-grid">
@@ -348,8 +317,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ PROJECT 02 — COURTYARD BLOCK ============ -->
 <section id="p02" class="night">
   <div class="grid-bg dark" style="position:absolute; inset:0;"></div>
   <div class="wrap reveal" style="position:relative;">
@@ -359,16 +326,13 @@
       <div style="border-color:rgba(233,231,221,.3);"><div class="label">Program</div><div class="value">School — classrooms + courtyard</div></div>
       <div><div class="label">Status</div><div class="value">Student project — Design Studio 2</div></div>
     </div>
-
     <h2 class="proj-title">Classrooms wrapped<br>around a shared yard.</h2>
     <p class="proj-desc" style="color:#a9b0aa;">A studio brief to design a two-storey school as a full loop around a shared courtyard. Repetitive classroom bays line the perimeter, linked by open-air corridors and stairs that spill down onto the yard. <strong style="color:var(--paper-on-ink);">The courtyard became the school's shared room</strong> — every classroom, stair and corridor opens onto it, turning circulation itself into the social heart of the building.</p>
   </div>
-
   <div class="wrap hero-figure reveal" style="position:relative;">
     <img src="render_trah.png" alt="Aerial night render of the brick courtyard school building with an illuminated central void">
     <div class="caption"><span>FIG. 01 — AERIAL VIEW, DUSK</span><span class="sheet">SCALE N.T.S.</span></div>
   </div>
-
   <div class="wrap reveal" style="position:relative;">
     <div class="stamp-divider" style="color:#9aa39d;">Drawing Set — Plan &amp; Sections</div>
     <div class="drawing-grid">
@@ -387,8 +351,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ PROJECT 03 — GARDEN VILLA ============ -->
 <section id="p03">
   <div class="wrap reveal">
     <div class="title-block mono">
@@ -397,16 +359,13 @@
       <div><div class="label">Program</div><div class="value">Private residence + garden</div></div>
       <div><div class="label">Status</div><div class="value">Student project — Design Studio 2</div></div>
     </div>
-
     <h2 class="proj-title">A house set inside<br>its own geometry.</h2>
     <p class="proj-desc">A residential studio project pairing a stone-and-stucco house with a landscape designed as carefully as the plan: a grid of square lawns, hedged in low white borders, radiating out from a central dining court. <strong>Lighting was treated as a material</strong> in its own right — grazing the stone facade, tracing the boundary walls, and marking every path underfoot after dark.</p>
   </div>
-
   <div class="wrap hero-figure reveal">
     <img src="Day_Render.png" alt="Daytime exterior render of the garden villa showing stone cladding and terrace">
     <div class="caption"><span>FIG. 01 — EXTERIOR, DAY VIEW FROM GARDEN</span><span class="sheet">SCALE N.T.S.</span></div>
   </div>
-
   <div class="wrap reveal">
     <div class="stamp-divider">Drawing Set — Elevations &amp; Site</div>
     <div class="drawing-grid">
@@ -421,26 +380,129 @@
     </div>
   </div>
 </section>
-
-<!-- ============ FOOTER / CONTACT ============ -->
 <footer id="contact">
-  <div class="wrap">
-    <div>
-      <h3>Let's talk<br>about a project.</h3>
-      <p>Architecture student open to collaborations, competitions and studio positions. Full drawing sets and models available on request.</p>
-    </div>
-    <div class="foot-meta">
-      <div class="row"><span>MAIL</span>parhamshahrabadi255@gmail.com</div>
-      <div class="row"><span>TEL</span>0912 568 5486</div>
-      <div class="row"><span>REF</span>Portfolio 2024–2026</div>
-    </div>
+<style>
+  footer .wrap{
+    align-items:center;
+  }
+  .contact-text p{
+    margin-top:10px;
+  }
+  .contact-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .contact-btn{
+    min-width:190px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    border:1px solid var(--ink);
+    background:var(--paper-2);
+    color:var(--ink);
+    text-decoration:none;
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    letter-spacing:.06em;
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .contact-btn svg{
+    width:20px;
+    height:20px;
+    flex:0 0 auto;
+    color:var(--blueprint);
+  }
+  .contact-btn strong{
+    display:block;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:13px;
+    letter-spacing:.08em;
+    line-height:1.1;
+  }
+  .contact-btn span{
+    display:block;
+    margin-top:2px;
+    color:var(--graphite);
+    font-size:10px;
+    letter-spacing:.04em;
+  }
+  .contact-btn:hover,
+  .contact-btn:focus-visible{
+    background:var(--blueprint);
+    color:var(--paper-on-ink);
+    border-color:var(--blueprint);
+    outline:none;
+  }
+  .contact-btn:hover svg,
+  .contact-btn:focus-visible svg,
+  .contact-btn:hover span,
+  .contact-btn:focus-visible span{
+    color:var(--paper-on-ink);
+  }
+  @media (max-width:820px){
+    .contact-actions{width:100%;}
+    .contact-btn{width:100%; justify-content:flex-start;}
+  }
+</style>
+<div class="wrap">
+  <div class="contact-text">
+    <h3>Let's talk<br>about a project.</h3>
+    <p>
+      Available for collaborations, competitions and studio positions.
+      Full drawing sets and models available on request.
+    </p>
   </div>
-  <div class="foot-bottom">
-    <span>PARHAM SHAHRABADI / ARCHITECTURE STUDENT</span>
-    <span>SHEET 00 — COVER &amp; INDEX</span>
-  </div>
-</footer>
+  <div class="contact-actions" aria-label="Contact links">
+    <!-- Email -->
+    <a href="mailto:parhamshahrabadi255@gmail.com"
+       class="contact-btn"
+       aria-label="Email Parham Shahrabadi">
 
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 6h16v12H4z"/>
+        <path d="M4 7l8 6 8-6"/>
+      </svg>
+      <span>
+        <strong>Email</strong>
+        parhamshahrabadi255@gmail.com
+      </span>
+    </a>
+    <!-- Phone -->
+    <a href="tel:+989125685486"
+       class="contact-btn"
+       aria-label="Call Parham Shahrabadi">
+
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                 19.8 19.8 0 0 1-8.63-3.07
+                 19.5 19.5 0 0 1-6-6
+                 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3
+                 a2 2 0 0 1 2 1.72
+                 c.12.9.33 1.77.63 2.62
+                 a2 2 0 0 1-.45 2.11L8.1 9.91
+                 a16 16 0 0 0 6 6
+                 l1.46-1.19a2 2 0 0 1 2.11-.45
+                 c.85.3 1.72.51 2.62.63
+                 A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>
+        <strong>Tel</strong>
+        +98 912 568 5486
+      </span>
+    </a>
+  </div>
+</div>
+<div class="foot-bottom">
+  <span>PARHAM SHAHRABADI / ARCHITECTURE STUDENT</span>
+  <span>SHEET 00 — CONTACT</span>
+</div>
+</footer>
 <script>
   const items = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
@@ -448,6 +510,5 @@
   }, {threshold:.12});
   items.forEach(i=>io.observe(i));
 </script>
-
 </body>
 </html>
