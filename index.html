@@ -237,6 +237,23 @@
     footer .foot-meta{text-align:left;}
     footer .wrap{flex-direction:column; align-items:flex-start;}
   }
+
+  /* ---------- Print fixes ----------
+     Forces all scroll-reveal content visible, removes the fixed
+     header from every printed page, and stops the browser from
+     slicing an image, caption, or title-block across a page break. */
+  @media print{
+    .reveal{opacity:1 !important; transform:none !important; transition:none !important;}
+    header.topbar{position:static !important; backdrop-filter:none;}
+    .hero{min-height:auto; padding-top:60px; padding-bottom:60px;}
+    section{padding:40px 32px;}
+    .figure, .hero-figure, .title-block, .about-grid, .caption, img{
+      break-inside:avoid; page-break-inside:avoid;
+    }
+    .drawing-grid{break-inside:auto;}
+    h2.proj-title, .stamp-divider{break-after:avoid; page-break-after:avoid;}
+    .grid-bg{display:none;}
+  }
 </style>
 </head>
 <body>
