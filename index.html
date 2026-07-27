@@ -253,6 +253,12 @@
     .drawing-grid{break-inside:auto;}
     h2.proj-title, .stamp-divider{break-after:avoid; page-break-after:avoid;}
     .grid-bg{display:none;}
+    /* Any image taller than one printable page (e.g. a near-square
+       floor plan) must shrink to fit rather than overflow the page
+       and get cut across the break. */
+    .figure img, .hero-figure img, .about-portrait{
+      max-height:210mm; width:auto; max-width:100%; height:auto; margin:0 auto; display:block;
+    }
   }
 </style>
 </head>
